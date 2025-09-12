@@ -5,14 +5,15 @@ using std::cout;
 using std::endl;
 
 int increment_value(int n);
-int* increment_address();
-int& increment_reference();
+int *increment_address();
+int &increment_reference();
 
 int all = 10;
 
-int main(void) {
+int main(void)
+{
 	int x;
-	int* y = &all;
+	int *y = &all;
 
 	// return by value
 	cout << "return by value" << endl;
@@ -25,16 +26,15 @@ int main(void) {
 	cout << *y << endl;
 	cout << all << endl;
 
-
 	// return by reference
 	cout << "return by reference" << endl;
-	
+
 	// 참조자로 받을때
-	int& z = increment_reference();
+	int &z = increment_reference();
 	cout << "참조자로 받을때" << endl;
 	cout << z << endl;
 	z += 1;
-	cout << z<<endl;
+	cout << z << endl;
 	cout << all << endl;
 	// int로 받을때
 	int r = increment_reference();
@@ -47,17 +47,20 @@ int main(void) {
 	return 0;
 }
 
-int increment_value(int n) {
+int increment_value(int n)
+{
 	n++;
 	return n;
 }
 
-int* increment_address() {
+int *increment_address()
+{
 	all++;
 	return &all;
 }
 
-int& increment_reference() {
+int &increment_reference()
+{
 	all++;
 	return all;
 }
