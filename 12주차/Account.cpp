@@ -10,7 +10,7 @@ void Account::deposit(int amount) throw(MalFormedData)
 	{
 		throw MalFormedData();
 	}
-	else
+	if(amount >= 0)
 	{
 		balance += amount;
 		std::cout << amount << "원 입급되어습니다." << std::endl;
@@ -24,11 +24,11 @@ int Account::withdraw(int amount) throw(MalFormedData, BalanceOutOfBoundsExcepti
 	{
 		throw MalFormedData();
 	}
-	else if (amount > balance)
+	if (amount > balance)
 	{
 		throw BalanceOutOfBoundsException();
 	}
-	else
+	if(amount<= balance)
 	{
 		setBalance(-amount);
 		return amount;
