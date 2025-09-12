@@ -28,7 +28,7 @@ String String::operator+(const String& ch1)
 
 bool String::operator==(const String& ch1)
 {
-
+    std::cout << strcmp(this->m_pStr, ch1.m_pStr);
     return strcmp(this->m_pStr,ch1.m_pStr);
 }
 
