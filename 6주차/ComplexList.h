@@ -19,7 +19,10 @@ public:
 	~ComplexList();
 	void Set(int, double, double);
 	Complex& Get(int);
+<<<<<<< Updated upstream
 	Complex* pGet(int);
+=======
+>>>>>>> Stashed changes
 	int Length(void);
 };
 
@@ -57,5 +60,8 @@ inline ComplexList::~ComplexList()
 
 
 #endif // !_ComplexList_H
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes

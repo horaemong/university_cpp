@@ -1,5 +1,6 @@
 #include "ComplexList.h"
 
+int ComplexList::counter = 0;
 
 void ComplexList::Set(int n, double r, double i)
 {
@@ -11,15 +12,17 @@ Complex& ComplexList::Get(int n)
 	return plist[n];
 }
 
-<<<<<<< Updated upstream
 Complex* ComplexList::pGet(int n)
 {
 	return &plist[n];
 }
 
-=======
->>>>>>> Stashed changes
 int ComplexList::Length(void)
 {
 	return length;
+}
+
+void ComplexList::setCounter(int n)
+{
+	counter = n;
 }

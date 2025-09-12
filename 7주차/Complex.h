@@ -8,7 +8,6 @@ private:
 	void init(double, double);
 
 public:
-	static int counter;
 	Complex(double, double);
 	Complex();
 	void SetComplex(double, double);
