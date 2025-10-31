@@ -21,22 +21,40 @@ String& String::operator=(const String& ch)
 
 String String::operator+(const String& ch1)
 {
-    String s1 = strcat(this->m_pStr, ch1.m_pStr);
     
-    return s1;
+    String a = this->m_pStr;
+    
+    return strcat(a.m_pStr, ch1.m_pStr);
 }
 
 bool String::operator==(const String& ch1)
 {
-    std::cout << strcmp(this->m_pStr, ch1.m_pStr);
-    return strcmp(this->m_pStr,ch1.m_pStr);
+    if (strcmp(this->m_pStr, ch1.m_pStr) == 1)
+    {
+		return false;
+    }
+    else
+    {
+        return true;
+    }
+    
 }
 
 bool String::operator==(const char* ch1)
 {
+    if(strcmp(this->m_pStr, ch1) == 1)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
 
-    std::cout<< strcmp(this->m_pStr, ch1);
-    return strcmp(this->m_pStr, ch1);
+char& String::operator[](int i)
+{
+    return m_pStr[i];
 }
 
 

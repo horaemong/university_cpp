@@ -37,7 +37,7 @@ int main(void)
 		cout << "둘은 다르다." << endl;
 	}
 
-	if (s1 == "bye")
+	if (s1 == "hello")
 	{
 		cout << "둘은 같다" << endl;
 	}
@@ -45,6 +45,11 @@ int main(void)
 	{
 		cout << "둘은 다르다." << endl;
 	}
+
+	// 7단계
+	cout << "s4[0] : " << s4[0] << endl;
+	s4[0] = 'H';
+	cout << "s4 : " << s4 << endl;
 
 	return 0;
 }

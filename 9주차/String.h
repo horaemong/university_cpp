@@ -1,6 +1,5 @@
 #ifndef _String_H_
 #define _String_H_
-//#define _CRT_SECURE_NO_WARNINGS
 #include <cstring>
 #include <iostream>
 #include <ostream>
@@ -20,6 +19,7 @@ public:
 	String operator+(const String& ch1);
 	bool operator==(const String& ch1);
 	bool operator==(const char *ch1);
+	char& operator[](int i);
 	int length();
 };
 
@@ -27,7 +27,7 @@ inline String::String(const char *ch)
 {
 
 	m_nLen = strlen(ch)+1;
-	m_pStr = new char[m_nLen + 1];
+	m_pStr = new char[m_nLen];
 	strcpy_s(m_pStr,m_nLen, ch);
 }
 
