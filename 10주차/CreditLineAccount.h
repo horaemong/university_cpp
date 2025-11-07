@@ -9,11 +9,11 @@ class CreditLineAccount
 private:
 	int creditLine;
 public:
-	CreditLineAccount(int, char*, int, int);
+	CreditLineAccount(int, const char*, int, int);
 	void withdraw(int);
 };
 
-inline CreditLineAccount::CreditLineAccount(int acc, char* name, int bal, int credit)
+inline CreditLineAccount::CreditLineAccount(int acc, const char* name, int bal, int credit)
 	:Account(acc, name, bal), creditLine(credit)
 {}
 #endif // !_CreditLineAccount_H_

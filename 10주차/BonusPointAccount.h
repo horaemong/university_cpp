@@ -9,11 +9,11 @@ class BonusPointAccount
 private:
 	double bonusPoint;
 public:
-	BonusPointAccount(int, char*, int);
+	BonusPointAccount(int, const char*, int);
 	int deposit(int);
 	void check();
 };
-inline BonusPointAccount::BonusPointAccount(int acc, char* name, int bal)
+inline BonusPointAccount::BonusPointAccount(int acc, const char* name, int bal)
 	:Account(acc, name, bal), bonusPoint(0)
 {
 

@@ -40,5 +40,6 @@ int Account::getBalance()
 
 int Account::setBalance(int a)
 {
+	balance = balance + a;
 	return balance+a;
 }

@@ -36,7 +36,18 @@ int main(void)
 
 	// test CreditLineAccount
 	cout << "\nCreditLineAccount class test" << endl;
+	CreditLineAccount d(1, "test", 0, 100);
+	d.check();
+	d.deposit(100);
+	d.withdraw(200);
+	d.check();
 
+	// test BonusPointAccount
+	cout << "\nBonusPointAccount class test" << endl;
+	BonusPointAccount e(1, "test", 0);
+	e.check();
+	e.deposit(100);
+	e.check();
 
 	return 0;
 }
