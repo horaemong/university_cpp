@@ -1,7 +1,7 @@
 #include "CheckingTrafficCardAccount.h"
 #include <iostream>
 
-int CheckingTrafficCardAccount::payTrafficCard(const char* card, int amount)
+int CheckingTrafficCardAccount::payTrafficCard(string card, int amount)
 {
 	if (hasTrafficCard)
 	{

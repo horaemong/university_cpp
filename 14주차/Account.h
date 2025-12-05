@@ -21,13 +21,14 @@ public:
 	void checkPassword(string);
 	int getBalance();
 	int setBalance(int);
+	int getAccountNo();
 };
 
 inline Account::Account(int acc, string n, int bal, string psw)
 {
 	accountNo = acc;
 	name = n;
-	balance = 0;
+	balance = bal;
 	password = psw;
 }
 

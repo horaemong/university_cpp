@@ -1,28 +1,25 @@
 #ifndef _CheckingAccount_H_
 #define _CheckingAccount_H_
 
+#include <string>
+using std::string;
 #include "Account.h"
 class CheckingAccount :public Account
 {
 private:
-	char* cardNo;
+	string cardNo;
 public:
-	CheckingAccount(int, const char*, int, const char*);
-	~CheckingAccount();
-	int pay(const char*, int);
+	CheckingAccount(int, string, int, string, string);
+
+	int pay(string, int);
 };
 
-inline CheckingAccount::CheckingAccount(int acc, const char* name, int bal, const char* card)
-	:Account(acc, name, bal)
+inline CheckingAccount::CheckingAccount(int acc, string name, int bal, string card, string psw)
+	:Account(acc, name, bal, psw)
 {
-	cardNo = new char[strlen(card) + 1];
-	strcpy(cardNo, card);
+	cardNo = card;
 }
 
-inline CheckingAccount::~CheckingAccount()
-{
-	delete[] cardNo;
-}
 
 #endif // !_CheckingAccount_H_
 

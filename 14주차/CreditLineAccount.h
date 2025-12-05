@@ -7,13 +7,13 @@ class CreditLineAccount
 	:public Account
 {
 private:
-	int creditLine;
+	int creditLine = 100;
 public:
-	CreditLineAccount(int, const char*, int, int);
+	CreditLineAccount(int, string, int, string);
 	void withdraw(int);
 };
 
-inline CreditLineAccount::CreditLineAccount(int acc, const char* name, int bal, int credit)
-	:Account(acc, name, bal), creditLine(credit)
+inline CreditLineAccount::CreditLineAccount(int acc, string name, int bal, string psw )
+	:Account(acc, name, bal, psw)
 {}
 #endif // !_CreditLineAccount_H_

@@ -1,9 +1,9 @@
 #include "CheckingAccount.h"
 #include <iostream>
 
-int CheckingAccount::pay(const char* card, int amount)
+int CheckingAccount::pay(string card, int amount)
 {
-	if (strcmp(this->cardNo, card) != 1)
+	if (card == cardNo)
 	{
 		std::cout << "카드번호가 일치합니다. " << amount<< "원 지불합니다." << std::endl;
 		withdraw(amount);

@@ -3,18 +3,19 @@
 
 #include "Account.h"
 
+
 class BonusPointAccount
 	:public Account
 {
 private:
 	double bonusPoint;
 public:
-	BonusPointAccount(int, const char*, int);
+	BonusPointAccount(int, string, int, string);
 	int deposit(int);
 	void check();
 };
-inline BonusPointAccount::BonusPointAccount(int acc, const char* name, int bal)
-	:Account(acc, name, bal), bonusPoint(0)
+inline BonusPointAccount::BonusPointAccount(int acc, string name, int bal, string psw)
+	:Account(acc, name, bal, psw), bonusPoint(0)
 {
 
 }

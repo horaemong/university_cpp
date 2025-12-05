@@ -1,7 +1,7 @@
 #include "Account.h"
 #include "BalanceOutOfBoundsException.h"
 #include "MalFormedData.h"
-#include "CheckPassword.h"
+#include "CheckInformation.h"
 #include <iostream>
 
 void Account::deposit(int amount)throw (MalFormedData)
@@ -39,7 +39,7 @@ void Account::check()
 	std::cout << "°èÁÂ¹øÈ£ " << accountNo << "¹ø, " << name << "´ÔÀÇ ³²Àº ÀÜ¾×Àº " << balance << "¿ø ÀÔ´Ï´Ù." << std::endl;
 }
 
-void Account::checkPassword(string psw) throw (CheckPassword)
+void Account::checkPassword(string psw) throw (CheckInformation)
 {
 	if (psw == password)
 	{
@@ -47,7 +47,7 @@ void Account::checkPassword(string psw) throw (CheckPassword)
 	}
 	else
 	{
-		throw CheckPassword();
+		throw CheckInformation();
 	}
 }
 
@@ -65,4 +65,9 @@ int Account::setBalance(int a)
 {
 	balance = balance + a;
 	return balance + a;
+}
+
+int Account::getAccountNo()
+{
+	return accountNo;
 }
